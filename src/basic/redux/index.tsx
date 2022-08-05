@@ -1,7 +1,13 @@
-import React from 'react';
+import Counter from './counter';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
 
 const Index = () => {
-  return <div>Index</div>;
+  return (
+    <Provider store={store}>
+      <Counter />
+    </Provider>
+  );
 };
 
 export default Index;
